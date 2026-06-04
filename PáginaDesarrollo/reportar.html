@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>REPORTAR</title>
+</head>
+<body>
+    <h1>Reportes</h1>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar incidente</a></li>
+            <li><a href="tickets.html">Ver mis tickets</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <p>Aquí podrás reportar cualquier problema que tengas con tu equipo o software. Completa el formulario a continuación para enviar tu reporte de incidente.</p>     
+    <form>
+        <label for="titulo">Título del incidente:</label><br>
+        <input type="text" id="titulo" name="titulo"><br><br>
+        <label for="descripcion">Categoría:</label><br>
+        <select id="categoria" name="categoria">
+            <option value="hardware">Hardware</option>
+            <option value="software">Software</option>
+            <option value="red">Red</option>
+        </select><br><br>
+
+        <label for="descripcion">Nivel de prioridad:</label><br>
+        <input type="radio" id="alta" name="prioridad" value="alta">
+        <label for="alta">Alta</label><br>  
+        <input type="radio" id="media" name="prioridad" value="media">
+        <label for="media">Media</label><br>
+        <input type="radio" id="baja" name="prioridad" value="baja">
+        <label for="baja">Baja</label><br>
+
+        <label for="descripcion">Descripción del incidente:</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Enviar reporte">
+
+    </form>
+    <hr>
+    <footer>
+        <p>&copy; 2023 Sistema de Reportes de Incidentes. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
