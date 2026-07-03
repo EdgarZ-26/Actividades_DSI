@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Design System - Tickets</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Design System para Gestión de Tickets</h1>
+    <p>Componentes visuales para clasificar, registrar y visualizar tickets según su prioridad.</p>
+  </header>
+
+  <main class="container">
+    <!-- SECCIÓN BOTONES -->
+    <section class="section" aria-labelledby="botones-title">
+      <h2 id="botones-title">Botones de prioridad del ticket</h2>
+
+      <p class="section-description">
+        Estos botones permiten representar acciones relacionadas con el nivel de prioridad de un ticket.
+      </p>
+
+      <div class="component-row">
+        <button class="btn btn-high-priority" type="button">
+          Prioridad alta
+        </button>
+
+        <button class="btn btn-medium-priority" type="button">
+          Prioridad media
+        </button>
+
+        <button class="btn btn-low-priority" type="button">
+          Prioridad baja
+        </button>
+      </div>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO -->
+    <section class="section" aria-labelledby="form-title">
+      <h2 id="form-title">Formulario de registro de ticket</h2>
+
+      <form class="ticket-form">
+        <div class="form-group">
+          <label for="titulo">Título del ticket</label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            placeholder="Ej. Error al iniciar sesión"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoría del ticket</label>
+          <select id="categoria" name="categoria">
+            <option value="">Seleccione una categoría</option>
+            <option value="soporte">Soporte técnico</option>
+            <option value="sistema">Sistema</option>
+            <option value="seguridad">Seguridad</option>
+            <option value="usuarios">Gestión de usuarios</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="prioridad">Prioridad</label>
+          <select id="prioridad" name="prioridad">
+            <option value="">Seleccione la prioridad</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción del problema</label>
+          <input
+            type="text"
+            id="descripcion"
+            name="descripcion"
+            placeholder="Describa brevemente el problema reportado"
+          >
+        </div>
+
+        <button type="submit" class="btn btn-high-priority">
+          Registrar ticket
+        </button>
+      </form>
+    </section>
+
+    <!-- SECCIÓN BADGES -->
+    <section class="section" aria-labelledby="badges-title">
+      <h2 id="badges-title">Alertas o badges de prioridad</h2>
+
+      <p class="section-description">
+        Las etiquetas permiten identificar rápidamente el nivel de urgencia de cada ticket.
+      </p>
+
+      <div class="component-row">
+        <span class="badge badge-high">Alta</span>
+        <span class="badge badge-medium">Media</span>
+        <span class="badge badge-low">Baja</span>
+      </div>
+    </section>
+
+    <!-- SECCIÓN TARJETAS -->
+    <section class="section" aria-labelledby="cards-title">
+      <h2 id="cards-title">Tarjetas de tickets</h2>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-header">
+            <h3>Ticket #001</h3>
+            <span class="badge badge-high">Alta</span>
+          </div>
+
+          <p class="card-title">Error crítico en el sistema</p>
+
+          <p class="card-text">
+            El sistema no permite el acceso a los usuarios registrados. 
+            Se requiere atención inmediata para restablecer el servicio.
+          </p>
+
+          <div class="card-info">
+            <p><strong>Categoría:</strong> Sistema</p>
+            <p><strong>Estado:</strong> Pendiente</p>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-high-priority" type="button">
+              Atender urgente
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h3>Ticket #002</h3>
+            <span class="badge badge-medium">Media</span>
+          </div>
+
+          <p class="card-title">Actualización de información</p>
+
+          <p class="card-text">
+            Se solicita modificar los datos de contacto de un usuario dentro 
+            de la plataforma administrativa.
+          </p>
+
+          <div class="card-info">
+            <p><strong>Categoría:</strong> Gestión de usuarios</p>
+            <p><strong>Estado:</strong> En revisión</p>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-medium-priority" type="button">
+              Revisar ticket
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h3>Ticket #003</h3>
+            <span class="badge badge-low">Baja</span>
+          </div>
+
+          <p class="card-title">Consulta general</p>
+
+          <p class="card-text">
+            El usuario solicita información sobre el funcionamiento básico 
+            de una sección del sistema.
+          </p>
+
+          <div class="card-info">
+            <p><strong>Categoría:</strong> Soporte técnico</p>
+            <p><strong>Estado:</strong> Resuelto</p>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-low-priority" type="button">
+              Ver ticket
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
