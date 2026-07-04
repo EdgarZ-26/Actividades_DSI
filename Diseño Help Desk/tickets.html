@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis tickets | Help Desk</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header id="encabezado-principal" class="encabezado-sitio">
+    <div id="contenedor-encabezado" class="contenedor encabezado-contenido">
+      <div id="marca-sistema" class="marca-sistema">
+        <span aria-hidden="true">🎫</span>
+        <div>
+          <h1 id="titulo-principal">Help Desk</h1>
+          <p id="subtitulo-principal">Seguimiento de tickets</p>
+        </div>
+      </div>
+
+      <nav id="navegacion-principal" class="navegacion" aria-label="Navegación principal">
+        <ul id="lista-navegacion" class="lista-navegacion">
+          <li><a id="enlace-inicio" class="enlace-navegacion" href="index.html">Inicio</a></li>
+          <li><a id="enlace-reportar" class="enlace-navegacion" href="reportar.html">Reportar incidente</a></li>
+          <li><a id="enlace-tickets" class="enlace-navegacion enlace-activo" href="tickets.html" aria-current="page">Ver mis tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal" class="contenedor">
+    <section id="seccion-tickets" class="seccion" aria-labelledby="titulo-tickets">
+      <div id="encabezado-tickets" class="encabezado-seccion">
+        <h2 id="titulo-tickets">Mis tickets reportados</h2>
+        <p id="descripcion-tickets">
+          Consulta el estado actual de los incidentes registrados y revisa su prioridad,
+          categoría y fecha de reporte.
+        </p>
+      </div>
+
+      <div id="resumen-tickets" class="grid-resumen">
+        <article id="resumen-pendientes" class="tarjeta resumen">
+          <h3>Pendientes</h3>
+          <span id="numero-pendientes" class="numero-resumen">1</span>
+          <p id="texto-pendientes">Pendiente</p>
+        </article>
+
+        <article id="resumen-proceso" class="tarjeta resumen">
+          <h3>En proceso</h3>
+          <span id="numero-proceso" class="numero-resumen">2</span>
+          <p id="texto-proceso">En proceso</p>
+        </article>
+
+        <article id="resumen-resueltos" class="tarjeta resumen">
+          <h3>Resueltos</h3>
+          <span id="numero-resueltos" class="numero-resumen">1</span>
+          <p id="texto-resueltos">Resuelto</p>
+        </article>
+      </div>
+
+      <div id="contenedor-tabla" class="contenedor-tabla">
+        <table id="tabla-tickets" class="tabla-tickets">
+          <caption id="titulo-tabla">
+            Listado de incidentes registrados en el sistema Help Desk
+          </caption>
+
+          <thead id="encabezado-tabla">
+            <tr id="fila-encabezado">
+              <th id="columna-titulo" scope="col">Título</th>
+              <th id="columna-categoria" scope="col">Categoría</th>
+              <th id="columna-prioridad" scope="col">Prioridad</th>
+              <th id="columna-descripcion" scope="col">Descripción</th>
+              <th id="columna-estado" scope="col">Estado</th>
+              <th id="columna-fecha" scope="col">Fecha de reporte</th>
+            </tr>
+          </thead>
+
+          <tbody id="cuerpo-tabla">
+            <tr id="ticket-001">
+              <td headers="columna-titulo">Problema con la impresora</td>
+              <td headers="columna-categoria">Hardware</td>
+              <td headers="columna-prioridad">
+                <span id="prioridad-ticket-001" class="badge badge-alta">Alta</span>
+              </td>
+              <td headers="columna-descripcion">La impresora no responde al comando de impresión.</td>
+              <td headers="columna-estado">En proceso</td>
+              <td headers="columna-fecha">2026-06-01</td>
+            </tr>
+
+            <tr id="ticket-002">
+              <td headers="columna-titulo">Error en el software de contabilidad</td>
+              <td headers="columna-categoria">Software</td>
+              <td headers="columna-prioridad">
+                <span id="prioridad-ticket-002" class="badge badge-media">Media</span>
+              </td>
+              <td headers="columna-descripcion">El software se cierra al intentar generar un informe.</td>
+              <td headers="columna-estado">Resuelto</td>
+              <td headers="columna-fecha">2026-06-02</td>
+            </tr>
+
+            <tr id="ticket-003">
+              <td headers="columna-titulo">Problema de conexión a la red</td>
+              <td headers="columna-categoria">Red</td>
+              <td headers="columna-prioridad">
+                <span id="prioridad-ticket-003" class="badge badge-baja">Baja</span>
+              </td>
+              <td headers="columna-descripcion">No se puede acceder a internet desde una computadora.</td>
+              <td headers="columna-estado">En proceso</td>
+              <td headers="columna-fecha">2026-06-03</td>
+            </tr>
+
+            <tr id="ticket-004">
+              <td headers="columna-titulo">Solicitud de cambio de contraseña</td>
+              <td headers="columna-categoria">Gestión de usuarios</td>
+              <td headers="columna-prioridad">
+                <span id="prioridad-ticket-004" class="badge badge-media">Media</span>
+              </td>
+              <td headers="columna-descripcion">Usuario solicita restablecimiento de contraseña institucional.</td>
+              <td headers="columna-estado">Pendiente</td>
+              <td headers="columna-fecha">2026-06-04</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer id="pie-pagina" class="pie-pagina">
+    <p id="texto-pie">&copy; 2026 Sistema de Reportes de Incidentes. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

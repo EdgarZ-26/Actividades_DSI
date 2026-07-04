@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Help Desk</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header id="encabezado-principal" class="encabezado-sitio">
+    <div id="contenedor-encabezado" class="contenedor encabezado-contenido">
+      <div id="marca-sistema" class="marca-sistema">
+        <span aria-hidden="true">🎫</span>
+        <div>
+          <h1 id="titulo-principal">Help Desk</h1>
+          <p id="subtitulo-principal">Sistema de reportes de incidentes</p>
+        </div>
+      </div>
+
+      <nav id="navegacion-principal" class="navegacion" aria-label="Navegación principal">
+        <ul id="lista-navegacion" class="lista-navegacion">
+          <li><a id="enlace-inicio" class="enlace-navegacion enlace-activo" href="index.html" aria-current="page">Inicio</a></li>
+          <li><a id="enlace-reportar" class="enlace-navegacion" href="reportar.html">Reportar incidente</a></li>
+          <li><a id="enlace-tickets" class="enlace-navegacion" href="tickets.html">Ver mis tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal" class="contenedor">
+    <section id="seccion-bienvenida" class="seccion-hero">
+      <div id="bloque-bienvenida" class="tarjeta hero-tarjeta">
+        <span id="etiqueta-sistema" class="badge badge-baja">Mesa de ayuda</span>
+
+        <h2 id="titulo-bienvenida">Bienvenido al sistema de reportes de incidentes</h2>
+
+        <p id="texto-bienvenida">
+          En este portal podrás registrar problemas relacionados con equipos, software,
+          red o servicios internos. También podrás consultar el estado de tus tickets
+          y su nivel de prioridad.
+        </p>
+
+        <div id="acciones-principales" class="grupo-botones">
+          <a id="boton-ir-reportar" class="boton boton-prioridad-alta" href="reportar.html">
+            Reportar incidente
+          </a>
+
+          <a id="boton-ir-tickets" class="boton boton-prioridad-media" href="tickets.html">
+            Revisar tickets
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="seccion-instrucciones" class="seccion" aria-labelledby="titulo-instrucciones">
+      <h2 id="titulo-instrucciones">¿Cómo funciona?</h2>
+
+      <div id="grid-instrucciones" class="grid-tarjetas">
+        <article id="tarjeta-registro" class="tarjeta">
+          <div id="icono-registro" class="icono-tarjeta" aria-hidden="true">📝</div>
+          <h3 id="titulo-registro">1. Registra el incidente</h3>
+          <p id="texto-registro">
+            Ingresa el título, la categoría, el nivel de prioridad y una descripción
+            clara del problema presentado.
+          </p>
+        </article>
+
+        <article id="tarjeta-prioridad" class="tarjeta">
+          <div id="icono-prioridad" class="icono-tarjeta" aria-hidden="true">⚠️</div>
+          <h3 id="titulo-prioridad">2. Clasifica la prioridad</h3>
+          <p id="texto-prioridad">
+            La prioridad permite identificar la urgencia del ticket: alta, media o baja,
+            según el impacto del incidente.
+          </p>
+        </article>
+
+        <article id="tarjeta-seguimiento" class="tarjeta">
+          <div id="icono-seguimiento" class="icono-tarjeta" aria-hidden="true">📊</div>
+          <h3 id="titulo-seguimiento">3. Consulta el estado</h3>
+          <p id="texto-seguimiento">
+            Revisa la página de tickets para conocer si el incidente está pendiente,
+            en proceso o resuelto.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="seccion-prioridades" class="seccion" aria-labelledby="titulo-prioridades">
+      <h2 id="titulo-prioridades">Niveles de prioridad</h2>
+
+      <div id="contenedor-prioridades" class="grid-prioridades">
+        <article id="prioridad-alta" class="tarjeta tarjeta-prioridad">
+          <h3>Nivel</h3>
+          <span id="badge-alta" class="badge badge-alta">Alto</span>
+          <p id="texto-prioridad-alta">
+            Incidentes críticos que impiden el uso del sistema o afectan directamente
+            la operación.
+          </p>
+        </article>
+
+        <article id="prioridad-media" class="tarjeta tarjeta-prioridad">
+          <h3>Nivel</h3>
+          <span id="badge-media" class="badge badge-media">Medio</span>
+          <p id="texto-prioridad-media">
+            Problemas importantes que afectan parcialmente el servicio o requieren revisión.
+          </p>
+        </article>
+
+        <article id="prioridad-baja" class="tarjeta tarjeta-prioridad">
+          <h3>Nivel</h3>
+          <span id="badge-baja" class="badge badge-baja">Bajo</span>
+          <p id="texto-prioridad-baja">
+            Consultas generales, solicitudes menores o incidentes sin impacto urgente.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="pie-pagina" class="pie-pagina">
+    <p id="texto-pie">&copy; 2026 Sistema de Reportes de Incidentes. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportar incidente | Help Desk</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header id="encabezado-principal" class="encabezado-sitio">
+    <div id="contenedor-encabezado" class="contenedor encabezado-contenido">
+      <div id="marca-sistema" class="marca-sistema">
+        <span aria-hidden="true">🎫</span>
+        <div>
+          <h1 id="titulo-principal">Help Desk</h1>
+          <p id="subtitulo-principal">Registro de incidentes</p>
+        </div>
+      </div>
+
+      <nav id="navegacion-principal" class="navegacion" aria-label="Navegación principal">
+        <ul id="lista-navegacion" class="lista-navegacion">
+          <li><a id="enlace-inicio" class="enlace-navegacion" href="index.html">Inicio</a></li>
+          <li><a id="enlace-reportar" class="enlace-navegacion enlace-activo" href="reportar.html" aria-current="page">Reportar incidente</a></li>
+          <li><a id="enlace-tickets" class="enlace-navegacion" href="tickets.html">Ver mis tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal" class="contenedor">
+    <section id="seccion-reporte" class="seccion" aria-labelledby="titulo-reporte">
+      <div id="encabezado-reporte" class="encabezado-seccion">
+        <h2 id="titulo-reporte">Reportar un incidente</h2>
+        <p id="descripcion-reporte">
+          Completa el siguiente formulario con la información del problema. Los campos
+          marcados son necesarios para registrar correctamente el ticket.
+        </p>
+      </div>
+
+      <form id="formulario-reporte" class="formulario-ticket" action="#" method="post">
+        <div id="grupo-titulo" class="grupo-formulario">
+          <label id="etiqueta-titulo" for="titulo-incidente">Título del incidente</label>
+          <input
+            id="titulo-incidente"
+            name="titulo-incidente"
+            type="text"
+            placeholder="Ej. Error al iniciar sesión"
+            required
+          >
+        </div>
+
+        <div id="grupo-categoria" class="grupo-formulario">
+          <label id="etiqueta-categoria" for="categoria-incidente">Categoría</label>
+          <select id="categoria-incidente" name="categoria-incidente" required>
+            <option value="">Seleccione una categoría</option>
+            <option value="hardware">Hardware</option>
+            <option value="software">Software</option>
+            <option value="red">Red</option>
+            <option value="usuarios">Gestión de usuarios</option>
+            <option value="seguridad">Seguridad</option>
+          </select>
+        </div>
+
+        <fieldset id="grupo-prioridad" class="grupo-prioridad">
+          <legend id="leyenda-prioridad">Nivel de prioridad</legend>
+
+          <div id="opciones-prioridad" class="opciones-prioridad">
+            <label id="opcion-alta" class="opcion-radio opcion-alta" for="prioridad-alta">
+              <input id="prioridad-alta" type="radio" name="prioridad-incidente" value="alta" required>
+              <span id="texto-alta">Alta</span>
+            </label>
+
+            <label id="opcion-media" class="opcion-radio opcion-media" for="prioridad-media">
+              <input id="prioridad-media" type="radio" name="prioridad-incidente" value="media">
+              <span id="texto-media">Media</span>
+            </label>
+
+            <label id="opcion-baja" class="opcion-radio opcion-baja" for="prioridad-baja">
+              <input id="prioridad-baja" type="radio" name="prioridad-incidente" value="baja">
+              <span id="texto-baja">Baja</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div id="grupo-descripcion" class="grupo-formulario">
+          <label id="etiqueta-descripcion" for="descripcion-incidente">Descripción del incidente</label>
+          <textarea
+            id="descripcion-incidente"
+            name="descripcion-incidente"
+            rows="6"
+            placeholder="Describe qué ocurrió, desde cuándo sucede y a qué usuario o equipo afecta."
+            required
+          ></textarea>
+        </div>
+
+        <div id="grupo-acciones-formulario" class="grupo-botones">
+          <button id="boton-enviar-reporte" type="submit" class="boton boton-prioridad-alta">
+            Enviar reporte
+          </button>
+
+          <button id="boton-limpiar-formulario" type="reset" class="boton boton-secundario">
+            Limpiar formulario
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer id="pie-pagina" class="pie-pagina">
+    <p id="texto-pie">&copy; 2026 Sistema de Reportes de Incidentes. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
